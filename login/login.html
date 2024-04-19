@@ -7,16 +7,21 @@
     <title>Login Food Restaurant</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body >
+<body>
 
-<form class="box" action="#" method="post">
-<h1>Login</h1>
-<input type="text" name="" placeholder="Username">
-<input type="password" name="" placeholder="Password">
-<input type="submit" name="" value="Login">
-</form>
+    <form class="box" id="loginForm" action="../index.html" method="post">
+        <h1>Login</h1>
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" name="login" value="Login">
+        <input type="button" value="signup" id="signupButton">
+    </form>
 
-
-    
+    <script>
+        // Fonction pour rediriger vers signup.html lors du clic sur le bouton "Signup"
+        document.getElementById("signupButton").addEventListener("click", function() {
+            window.location.href = "../signup/signup.html";
+        });
+    </script>
 </body>
 </html>
