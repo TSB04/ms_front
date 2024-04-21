@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,22 @@
     <title>Login Food Restaurant</title>
     <link rel="stylesheet" href="style.css">
 </head>
+  
 <body>
+    <main class="container">
 
-    <form class="box" id="loginForm" action="../index.html" method="post">
-        <h1>Login</h1>
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit" name="login" value="Login">
-        <input type="button" value="signup" id="signupButton">
-    </form>
+        <form class="box" id="loginForm" action="#" method="post">
+            <h1>Login</h1>
+            <input type="text" id="username" name="username" placeholder="Username">
+            <input type="password" id="password" name="password" placeholder="Password">
+            <input type="submit" value="Login">
+        </form>
 
-    <script>
-        // Fonction pour rediriger vers signup.html lors du clic sur le bouton "Signup"
-        document.getElementById("signupButton").addEventListener("click", function() {
-            window.location.href = "../signup/signup.html";
-        });
-    </script>
+        <p class="text text-3">Don't have an account yet ! <strong><a href="../signup/signup.html">Sign Up</a></strong></p>
+    </main>
+
+    <script src="../api/login.js"></script>
+
 </body>
+
 </html>

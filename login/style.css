@@ -1,25 +1,61 @@
-body{
+body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
     background: #8f7d55;
 }
-.box{
-    width: 300px;
-    padding: 40px;
+
+.container {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 20%;
+    left: 35%;
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(41, 36, 25, 0.3);
+    border-radius: 10px;
+}
+.container-2 {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(41, 36, 25, 0.3);
+    border-radius: 10px;
+}
+
+.box {
+    padding: 40px;
     background: #191919;
     text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
 }
-.box h1{
+
+.box-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
+}
+
+
+.box h1 {
     color: white;
     text-transform: uppercase;
     font-weight: 500;
 }
-.box input[type = "text"],.box input[type = "password"]{
+.box input[type="email"],
+.box input[type="text"],
+.box input[type="password"] {
     border: 0;
     background: none;
     display: block;
@@ -33,11 +69,14 @@ body{
     border-radius: 24px;
     transition: 0.25s;
 }
-.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+.box input[type="email"]:focus,
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
     width: 280px;
     border-color: #2ecc71;
 }
-.box input[type = "submit"]{
+
+.box input[type="submit"] {
     border: 0;
     background: none;
     display: block;
@@ -51,23 +90,22 @@ body{
     transition: 0.25s;
     cursor: pointer;
 }
-.box input[type = "submit"]:hover{
+
+.box input[type="submit"]:hover {
     background: #2ecc71;
 }
-.box input[type = "button"]{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #2ecc71;
-    padding: 14px 40px;
-    outline: none;
+
+.text-3 {
     color: white;
-    border-radius: 25px;
-    transition: 0.25s;
-    cursor: pointer;
+    font-size: 14px;
+    font-weight: 300;
 }
-.box input[type = "button"]:hover{
-    background: #2ecc71;
+
+.text-3 a {
+    color: #2ecc71;
+}
+
+.text-3 a:hover {
+    color: #e4aa63;
+
 }
