@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,22 @@
     <title>Login Food Restaurant</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body >
 
-<form class="box" action="#" method="post">
-<h1>Login</h1>
-<input type="text" name="" placeholder="Username">
-<input type="password" name="" placeholder="Password">
-<input type="submit" name="" value="Login">
-</form>
+<body>
+    <main class="container">
 
+        <form class="box" id="loginForm" action="#" method="post">
+            <h1>Login</h1>
+            <input type="text" id="username" name="username" placeholder="Username">
+            <input type="password" id="password" name="password" placeholder="Password">
+            <input type="submit" value="Login">
+        </form>
 
-    
+        <p class="text text-3">Don't have an account yet ! <strong><a href="../signup/signup.html">Sign Up</a></strong></p>
+    </main>
+
+    <script src="../api/login.js"></script>
+
 </body>
+
 </html>
