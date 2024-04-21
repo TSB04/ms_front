@@ -11,7 +11,7 @@
   -->
   <title> Amazing & Delicious Food</title>
   <meta name="title" content="RestaurantParis- Amazing & Delicious Food">
-  <meta name="description" content="This is a Restaurant html template made by codewithsadee">
+  <meta name="description" content="">
 
   <!-- 
     - favicon
@@ -37,9 +37,68 @@
   <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg">
   <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg">
 
+  <!-- session script -->
+  <script src="./assets/js/utils.js"></script>
+
 </head>
 
 <body id="top">
+
+  <!-- #DATA SCRIPT -->
+  <script>
+
+
+    // Example usage
+    const userData = getUserData();
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Your code here
+
+      if (userData) {
+        console.log("User is logged in:", userData);
+
+        // Hide login link
+        const loginLink = document.getElementById("loginLink");
+        if (loginLink) {
+          loginLink.style.display = "none";
+        }
+        console.log("Login link element:", loginLink);
+
+        // Show logout link
+        const logoutLink = document.getElementById("logoutLink");
+        if (logoutLink) {
+          logoutLink.style.display = "block";
+        }
+
+        // Show user icon & username
+        const userIcon = document.getElementById("userIcon");
+        if (userIcon) {
+          userIcon.style.display = "block";
+        }
+
+
+        // Display username
+        const usernameElement = document.getElementById("username");
+
+        if (usernameElement) {
+          usernameElement.textContent = userData.username;
+        }
+
+      } else {
+        console.log("User is not logged in.");
+        // Redirect or display login form
+      }
+
+      document.getElementById("logoutLink").addEventListener("click", function () {
+        console.log("Logging out user:", userData);
+        logout();
+        window.location.reload();
+      });
+    });
+
+
+  </script>
+
 
   <!-- 
     - #PRELOADER
@@ -178,12 +237,18 @@
 
       </nav>
 
-      <a href="login/login.html" class="btn btn-secondary">
+      <a href="login/login.html" class="btn btn-secondary" id="loginLink">
         <span class="text text-1">Login</span>
-
         <span class="text text-2" aria-hidden="true">Welcome</span>
       </a>
 
+      <button class="btn btn-secondary" id="logoutLink" style="display: none;">
+        <span class="text text-1" id="username">
+          <ion-icon name="person-outline" aria-hidden="true" id="userIcon" alt="User Icon"
+            style="display: none;"></ion-icon>
+        </span>
+        <span class="text text-2" aria-hidden="true" id="logoutLink">Logout</span>
+      </button>
       <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
         <span class="line line-1"></span>
         <span class="line line-2"></span>
@@ -319,12 +384,12 @@
           <h2 class="headline-1 section-title">We Offer Top Notch</h2>
 
           <p class="section-text">
-          Best food  in town, we serve the best quality and fresh
-          ingredients that will make your taste buds dance with joy!
-          We are a family run restaurant serving traditional dishes
-          from all over the world. Our chefs use only the finest
-          ingredients sourced directly from
-          farmers around the globe.
+            Best food in town, we serve the best quality and fresh
+            ingredients that will make your taste buds dance with joy!
+            We are a family run restaurant serving traditional dishes
+            from all over the world. Our chefs use only the finest
+            ingredients sourced directly from
+            farmers around the globe.
           </p>
 
           <ul class="grid-list">
@@ -430,7 +495,7 @@
               the best restaurant,in paris
 
 
-            
+
             </p>
 
             <div class="contact-label">Book Through Call</div>
@@ -859,7 +924,7 @@
               <address class="body-4">
                 Restaurant , Delicious, <br>
                 Paris 70020
-            
+
               </address>
 
               <p class="contact-label">Lunch Time</p>
@@ -1180,9 +1245,9 @@
 
       <div class="footer-bottom">
 
-       <p>
-        Food Restaurant 
-       </p>
+        <p>
+          Food Restaurant
+        </p>
 
       </div>
 
@@ -1209,6 +1274,8 @@
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+
+
 
   <!-- 
     - ionicon link
